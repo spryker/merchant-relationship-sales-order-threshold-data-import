@@ -24,11 +24,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFac
         $this->merchantRelationshipFacade = $merchantRelationshipFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer|null
-     */
     public function findMerchantRelationshipByKey(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): ?MerchantRelationshipTransfer {

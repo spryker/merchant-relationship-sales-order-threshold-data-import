@@ -30,9 +30,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportConfig extends DataImport
         );
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleDataImportDirectory(): string
     {
         return implode(DIRECTORY_SEPARATOR, [
@@ -42,9 +39,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportConfig extends DataImport
         ]);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         /** @phpstan-var non-empty-string */

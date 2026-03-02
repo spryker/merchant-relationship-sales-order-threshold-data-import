@@ -46,33 +46,21 @@ class MerchantRelationshipSalesOrderThresholdDataImportBusinessFactory extends D
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipSalesOrderThresholdFacadeInterface
-     */
     public function getMerchantRelationshipSalesOrderThresholdFacade(): MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipSalesOrderThresholdFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipSalesOrderThresholdDataImportDependencyProvider::FACADE_MERCHANT_RELATIONSHIP_SALES_ORDER_THRESHOLD);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFacadeInterface
-     */
     public function getMerchantRelationshipFacade(): MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipSalesOrderThresholdDataImportDependencyProvider::FACADE_MERCHANT_RELATIONSHIP);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToStoreFacadeInterface
-     */
     public function getStoreFacade(): MerchantRelationshipSalesOrderThresholdDataImportToStoreFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipSalesOrderThresholdDataImportDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToCurrencyFacadeInterface
-     */
     public function getCurrencyFacade(): MerchantRelationshipSalesOrderThresholdDataImportToCurrencyFacadeInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipSalesOrderThresholdDataImportDependencyProvider::FACADE_CURRENCY);

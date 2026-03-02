@@ -24,11 +24,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipSal
         $this->merchantRelationshipSalesOrderThresholdFacade = $merchantRelationshipSalesOrderThresholdFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipSalesOrderThresholdTransfer $merchantRelationshipSalesOrderThresholdTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipSalesOrderThresholdTransfer
-     */
     public function saveMerchantRelationshipSalesOrderThreshold(
         MerchantRelationshipSalesOrderThresholdTransfer $merchantRelationshipSalesOrderThresholdTransfer
     ): MerchantRelationshipSalesOrderThresholdTransfer {

@@ -70,12 +70,6 @@ class MerchantRelationshipSalesOrderThresholdWriterStep implements DataImportSte
      */
     protected $currenciesHeap = [];
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipSalesOrderThresholdFacadeInterface $merchantRelationshipSalesOrderThresholdFacade
-     * @param \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     * @param \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\MerchantRelationshipSalesOrderThresholdDataImport\Dependency\Facade\MerchantRelationshipSalesOrderThresholdDataImportToCurrencyFacadeInterface $currencyFacade
-     */
     public function __construct(
         MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipSalesOrderThresholdFacadeInterface $merchantRelationshipSalesOrderThresholdFacade,
         MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFacadeInterface $merchantRelationshipFacade,
@@ -88,11 +82,6 @@ class MerchantRelationshipSalesOrderThresholdWriterStep implements DataImportSte
         $this->currencyFacade = $currencyFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $storeTransfer = $this->getStoreByName($dataSet[MerchantRelationshipSalesOrderThresholdDataSetInterface::COLUMN_STORE]);
@@ -118,17 +107,6 @@ class MerchantRelationshipSalesOrderThresholdWriterStep implements DataImportSte
         }
     }
 
-    /**
-     * @param string $salesOrderThresholdTypeKey
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     * @param int $thresholdValue
-     * @param int|null $fee
-     * @param string|null $glossaryKey
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipSalesOrderThresholdTransfer
-     */
     protected function createMerchantRelationshipSalesOrderThresholdTransfer(
         string $salesOrderThresholdTypeKey,
         MerchantRelationshipTransfer $merchantRelationshipTransfer,

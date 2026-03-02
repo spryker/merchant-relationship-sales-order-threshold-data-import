@@ -40,9 +40,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         $this->setupDependencies();
@@ -68,18 +65,12 @@ class MerchantRelationshipSalesOrderThresholdDataImportPluginTest extends Unit
         $this->tester->cleanupMerchantRelationshipSalesOrderThresholds();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         $dataImportPlugin = new MerchantRelationshipSalesOrderThresholdDataImportPlugin();
         $this->assertSame(MerchantRelationshipSalesOrderThresholdDataImportConfig::IMPORT_TYPE_MERCHANT_RELATIONSHIP_SALES_ORDER_THRESHOLD, $dataImportPlugin->getImportType());
     }
 
-    /**
-     * @return void
-     */
     protected function createRelatedData(): void
     {
         $idMerchant = $this->tester->haveMerchant()->getIdMerchant();
@@ -108,9 +99,6 @@ class MerchantRelationshipSalesOrderThresholdDataImportPluginTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     protected function setupDependencies(): void
     {
         $strategies = [

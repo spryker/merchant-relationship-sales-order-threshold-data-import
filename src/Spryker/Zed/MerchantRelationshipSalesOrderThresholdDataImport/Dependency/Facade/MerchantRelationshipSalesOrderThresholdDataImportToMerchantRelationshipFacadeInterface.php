@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\MerchantRelationshipTransfer;
 
 interface MerchantRelationshipSalesOrderThresholdDataImportToMerchantRelationshipFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer|null
-     */
     public function findMerchantRelationshipByKey(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): ?MerchantRelationshipTransfer;

@@ -18,17 +18,11 @@ class MerchantRelationshipSalesOrderThresholdDataImportHelper extends Module
      */
     protected const ERROR_MESSAGE_EXPECTED = 'Expected at least one entry in the database table `%s` but table is empty.';
 
-    /**
-     * @return void
-     */
     public function assertMerchantRelationshipSalesOrderThresholdTableHasRecords(): void
     {
         $this->assertTrue($this->getMerchantRelationshipSalesOrderThresholdQuery()->exists(), sprintf(static::ERROR_MESSAGE_EXPECTED, SpyMerchantRelationshipSalesOrderThresholdTableMap::TABLE_NAME));
     }
 
-    /**
-     * @return \Orm\Zed\MerchantRelationshipSalesOrderThreshold\Persistence\SpyMerchantRelationshipSalesOrderThresholdQuery
-     */
     protected function getMerchantRelationshipSalesOrderThresholdQuery(): SpyMerchantRelationshipSalesOrderThresholdQuery
     {
         return SpyMerchantRelationshipSalesOrderThresholdQuery::create();
